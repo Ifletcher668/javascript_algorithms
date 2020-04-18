@@ -1,0 +1,11 @@
+/Users/Isiah/Documents/coding_dojo/bootcamp/c#/algorithms/AlgoORM/bin/Debug/netcoreapp2.2/AlgoORM.deps.json
+/Users/Isiah/Documents/coding_dojo/bootcamp/c#/algorithms/AlgoORM/bin/Debug/netcoreapp2.2/AlgoORM.runtimeconfig.json
+/Users/Isiah/Documents/coding_dojo/bootcamp/c#/algorithms/AlgoORM/bin/Debug/netcoreapp2.2/AlgoORM.runtimeconfig.dev.json
+/Users/Isiah/Documents/coding_dojo/bootcamp/c#/algorithms/AlgoORM/bin/Debug/netcoreapp2.2/AlgoORM.dll
+/Users/Isiah/Documents/coding_dojo/bootcamp/c#/algorithms/AlgoORM/bin/Debug/netcoreapp2.2/AlgoORM.pdb
+/Users/Isiah/Documents/coding_dojo/bootcamp/c#/algorithms/AlgoORM/obj/Debug/netcoreapp2.2/AlgoORM.csprojAssemblyReference.cache
+/Users/Isiah/Documents/coding_dojo/bootcamp/c#/algorithms/AlgoORM/obj/Debug/netcoreapp2.2/AlgoORM.csproj.CoreCompileInputs.cache
+/Users/Isiah/Documents/coding_dojo/bootcamp/c#/algorithms/AlgoORM/obj/Debug/netcoreapp2.2/AlgoORM.AssemblyInfoInputs.cache
+/Users/Isiah/Documents/coding_dojo/bootcamp/c#/algorithms/AlgoORM/obj/Debug/netcoreapp2.2/AlgoORM.AssemblyInfo.cs
+/Users/Isiah/Documents/coding_dojo/bootcamp/c#/algorithms/AlgoORM/obj/Debug/netcoreapp2.2/AlgoORM.dll
+/Users/Isiah/Documents/coding_dojo/bootcamp/c#/algorithms/AlgoORM/obj/Debug/netcoreapp2.2/AlgoORM.pdb
