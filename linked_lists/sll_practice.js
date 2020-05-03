@@ -69,7 +69,6 @@ class LinkedList {
                 let node = new Node(arr[i])
                 // add to back 
                 if (this.head === null) {
-                    console.log("?")
                     this.head = node; 
                 } else {
                 let runner = this.head;
@@ -255,15 +254,67 @@ class LinkedList {
         }
         console.log("value not found")
         return false 
-
     }
+    // duplicates removed in place, but time sacrificed. Is this actually O(n) or is it O(log(n)? 
+    removeDuplicates() {
+        if (this.isEmpty() || this.head.next === null) {
+            return; 
+        }
 
+        let count, runner1, runner2, check; 
+
+        runner1 = this.head;
+        count = 0; 
+
+        while (runner1) {
+            count ++;
+            runner1 = runner1.next;
+        }
+
+        runner1 = this.head;
+        runner2 = this.head; 
+        check = runner2.data; 
+
+        for (let i = 0; i < count; i++) {
+            while(runner1.next) {
+                if (runner1.next.data === check) {
+                    if (runner1.next.next === null) {
+                        runner1.next = null; 
+                        break; 
+                    }
+                    runner1.next = runner1.next.next; 
+                }
+                else {
+                    runner1 = runner1.next
+                }
+            }
+            if (runner2.next !== null) {
+                runner2 = runner2.next; 
+                runner1 = runner2; 
+                check = runner2.data; 
+            }
+        }
+
+        // store first value and loop through list, looking for duplicates 
+        // do that for everything in the list 
+        // when a duplicate is found, remove that node. {
+
+        // runner.next === duplicateValue 
+        // set runner.next to runner.next.next
+        // if runner.next.next == null, just remove from back, (runner.next ==null)
+        // continue the loop 
+        //} what if duplicate is last node? 
+        // if duplicate found on last node, check for runner.next.next == null. 
+        // if runner.next == null, 
+
+        
+    }
 
 
 };
 
 const list = new LinkedList(); 
-const array = [1,2,3,4,5,5,6,7,8,9,10,11,12,14,15,16,16];
+const array = [1,2,2,2,"test","test","test","test",2,11,1,1,2,2,11,1,1,11,11,11,11,11,11,11,11,11,11,11,11];
 
 // list.addToBack(100).addToBack(20).addToBack("string");
 // list.display();
@@ -272,7 +323,8 @@ list.seedFromArray(array);
 // list.addToBackRecursive(200).addToBackRecursive(300).addToBackRecursive(3112300).addToBackRecursive("3000").addToBack([1,2,3]).addToBack(100); 
 // list.removeFromBack();
 list.display();
-let test = list.middleValue();
-console.log(test); 
+list.removeDuplicates();
+list.display(); 
+// should return list [1,11,2,3,5,4,6,7,8,9,12,14,15,16]
 
 
