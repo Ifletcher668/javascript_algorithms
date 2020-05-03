@@ -171,44 +171,63 @@ class LinkedList {
 
     }
 
-    middleValue() {
-        if (this.isEmpty() || this.head.next === null || this.head.next.next === null) {
-            return null
-        }
-        else if (this.head.next.next.next === null) {
-            return this.head.next.data  
-        }
-        else {
-            let count = 0;
-            let runner = this.head;
-            while (runner !== null) {
-                count += 1;
-                runner = runner.next
-            }
-            runner = this.head; 
-            if (count % 2 === 0) {
-                count /= 2;
-                let list = [];
-                for (let i = 0; i < count; i++) {
-                    if(i + 1 === count) {
-                        break; 
-                    }
-                    runner = runner.next 
-                }
-                list.push(runner.data)
-                list.push(runner.next.data)
-                return list 
-            }
-            else {
-                count = Math.floor(count / 2);  
-                for (let i = 0; i < count; i++) {
-                    runner = runner.next 
-                }
-                return runner.data 
-            }
+    // middleValue() {
+    //     if (this.isEmpty() || this.head.next === null || this.head.next.next === null) {
+    //         return null
+    //     }
+    //     else if (this.head.next.next.next === null) {
+    //         return this.head.next.data  
+    //     }
+    //     else {
+    //         let count = 0;
+    //         let runner = this.head;
+    //         while (runner) {
+    //             count += 1;
+    //             runner = runner.next
+    //         }
+    //         runner = this.head; 
+    //         if (count % 2 === 0) {
+    //             count /= 2;
+    //             let list = [];
+    //             for (let i = 0; i < count; i++) {
+    //                 if(i + 1 === count) {
+    //                     break; 
+    //                 }
+//                      runner = runner.next 
+    //             }
+    //             list.push(runner.data)
+    //             list.push(runner.next.data)
+    //             return list 
+    //         }
+    //         else {
+    //             count = Math.floor(count / 2);  
+    //             for (let i = 0; i < count; i++) {
+    //                 runner = runner.next 
+    //             }
+    //             return runner.data 
+    //         }
 
+    //     }
+    // };
+
+    middleValue() {
+        if (this.isEmpty() || this.head.next === null) {
+            return null; 
         }
-    };
+        let count, runner, middle; 
+        count = 0;
+        runner = this.head;  
+        while(runner) {
+            count ++;
+            runner = runner.next; 
+        }
+        middle = Math.floor(count/2);
+        runner = this.head; 
+        for (let i = 0; i < middle; i++) {
+            runner = runner.next; 
+        }
+        return runner.data; 
+    }
 
     contains(val) {
         // check for empty
@@ -244,7 +263,7 @@ class LinkedList {
 };
 
 const list = new LinkedList(); 
-const array = [1,2,3,4,5];
+const array = [1,2,3,4,5,5,6,7,8,9,10,11,12,14,15,16,16];
 
 // list.addToBack(100).addToBack(20).addToBack("string");
 // list.display();
@@ -253,6 +272,7 @@ list.seedFromArray(array);
 // list.addToBackRecursive(200).addToBackRecursive(300).addToBackRecursive(3112300).addToBackRecursive("3000").addToBack([1,2,3]).addToBack(100); 
 // list.removeFromBack();
 list.display();
-
+let test = list.middleValue();
+console.log(test); 
 
 
