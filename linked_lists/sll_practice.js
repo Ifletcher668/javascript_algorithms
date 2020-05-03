@@ -293,38 +293,9 @@ class LinkedList {
                 runner1 = runner2; 
                 check = runner2.data; 
             }
-        }
-
-        // store first value and loop through list, looking for duplicates 
-        // do that for everything in the list 
-        // when a duplicate is found, remove that node. {
-
-        // runner.next === duplicateValue 
-        // set runner.next to runner.next.next
-        // if runner.next.next == null, just remove from back, (runner.next ==null)
-        // continue the loop 
-        //} what if duplicate is last node? 
-        // if duplicate found on last node, check for runner.next.next == null. 
-        // if runner.next == null, 
-
-        
+        } 
     }
-
-
 };
 
-const list = new LinkedList(); 
-const array = [1,2,2,2,"test","test","test","test",2,11,1,1,2,2,11,1,1,11,11,11,11,11,11,11,11,11,11,11,11];
-
-// list.addToBack(100).addToBack(20).addToBack("string");
-// list.display();
-list.seedFromArray(array);
-// list.addToFront(100).addToFront("string")
-// list.addToBackRecursive(200).addToBackRecursive(300).addToBackRecursive(3112300).addToBackRecursive("3000").addToBack([1,2,3]).addToBack(100); 
-// list.removeFromBack();
-list.display();
-list.removeDuplicates();
-list.display(); 
-// should return list [1,11,2,3,5,4,6,7,8,9,12,14,15,16]
 
 
