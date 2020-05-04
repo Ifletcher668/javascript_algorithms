@@ -62,7 +62,7 @@ class LinkedList {
     seedFromArray(arr) {
         // check for empty array
         if (arr.length === 0) {
-            console.log("empty array given, could not instantiate a Singly Linked List")
+            console.log("empty array given, could not instantiate a Singly Linked List");
             return null
         } else {
             for (let i = 0; i < arr.length; i++) {
@@ -295,7 +295,44 @@ class LinkedList {
             }
         } 
     }
+
+// currently not working, but is a far better way of doing the function 
+    removeDuplicatesHash() {
+        if (this.isEmpty() || this.head.next === null) {
+            return; 
+        }
+        
+        const seen = {};
+        let runner = this.head;  
+        let buffer = new LinkedList(); 
+        while (runner) {
+            let item = runner.data;
+            if (seen.hasOwnProperty(item) === false) {
+                seen[item] = true; 
+                buffer.addToBack(item); 
+            }
+            runner = runner.next; 
+        }
+        return buffer; 
+    }
+    
+    numToList(num) {
+
+    }
+
+    // each number is represented by a linked list. The numbers are stored backwards, so they read left to right. I assume that's because they're added to the front 
+    sumLists(l1, l2) {
+    
+    }
 };
 
 
+let list = new LinkedList(); 
+list.seedFromArray([1,1,2,3,4,5,5,1])
+console.log("before: \t")
+list.display();
+list.removeDuplicatesHash();
 
+
+// console.log("after: \t")
+// list.display();
